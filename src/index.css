@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+:root {
+  /* Common Palette */
+  --primary-color: #ffc107;
+  --accent-color: #f59e0b;
+  --font-family: 'Outfit', sans-serif;
+
+  /* Default (Light Mode) Variables */
+  --bg-body: #f1f5f9;
+  /* Slate 100 */
+  --text-main: #0f172a;
+  /* Slate 900 */
+  --text-secondary: #64748b;
+  /* Slate 500 */
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --card-border: rgba(0, 0, 0, 0.05);
+  --navbar-bg: rgba(255, 255, 255, 0.85);
+  --navbar-border: rgba(0, 0, 0, 0.05);
+  --nav-link-color: #334155;
+  --glass-effect: blur(12px);
+}
+
+/* Dark Mode Overrides */
+/* Dark Mode Overrides */
+/* Dark Mode Overrides */
+[data-theme='dark'] {
+  --bg-body: radial-gradient(circle at top left, #334155, #1e293b, #0f172a);
+  /* Lighter Slate Navy Gradient */
+  --text-main: #ffffff;
+  --text-secondary: #cbd5e1;
+  /* Slate 300 */
+  --card-bg: rgba(255, 255, 255, 0.05);
+  /* Clean white-tint opacity */
+  --card-border: rgba(255, 255, 255, 0.1);
+  --navbar-bg: rgba(30, 41, 59, 0.85);
+  /* Slate 800 base */
+  --navbar-border: rgba(255, 255, 255, 0.1);
+  --nav-link-color: #f8fafc;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: var(--font-family) !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-body);
+  background-attachment: fixed;
+  /* fix gradient scroll */
+  color: var(--text-main);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Navbar Customization */
+.navbar-custom {
+  background-color: var(--navbar-bg) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: #f8fafc !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+.navbar-custom .dropdown-menu {
+  background-color: var(--dark-bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-custom .dropdown-item {
+  color: #f8fafc;
+}
+
+.navbar-custom .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--primary-color);
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+/* Utilities */
+.text-primary-custom {
+  color: var(--primary-color) !important;
+}
+
+.bg-dark-custom {
+  background-color: var(--dark-bg) !important;
+}
+
+.text-accent {
+  color: var(--accent-color) !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #0f172a;
+  /* Ensure dark text for Gold background */
+}
+
+.btn-primary:hover {
+  background-color: #e0a800;
+  border-color: #e0a800;
+}
+
+/* Bootstrap Overrides for Consistent Theme */
+.text-primary,
+.text-primary-custom {
+  color: var(--primary-color) !important;
+}
+
+.bg-primary,
+.bg-primary-custom {
+  background-color: var(--primary-color) !important;
+}
+
+/* Animations */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}

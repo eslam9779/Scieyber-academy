@@ -1,0 +1,61 @@
+import React from 'react';
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+
+const ContactSection = () => {
+    const { t } = useTranslation();
+
+    return (
+        <section className="py-5 position-relative">
+            <Container>
+                <div className="text-center mb-5">
+                    <h5 className="text-primary-custom fw-bold text-uppercase">{t('ContactUs')}</h5>
+                    <h2 className="display-6 fw-bold" style={{ color: 'var(--text-main)' }}>{t('ContactTitle')}</h2>
+                    <p className="opacity-75" style={{ color: 'var(--text-secondary)' }}>{t('ContactSubtitle')}</p>
+                </div>
+                <div className="d-flex justify-content-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="w-100"
+                        style={{ maxWidth: '700px' }}
+                    >
+                        <div className="p-5 rounded-4 shadow-lg" style={{ background: 'var(--card-bg)', backdropFilter: 'blur(10px)', border: '1px solid var(--card-border)' }}>
+                            <Form>
+                                <Row>
+                                    <Col md={6} className="mb-3">
+                                        <Form.Group controlId="formName">
+                                            <Form.Label className="fw-bold small" style={{ color: 'var(--text-main)' }}>{t('Name')}</Form.Label>
+                                            <Form.Control type="text" placeholder={t('Name')} className="border-0 py-3 rounded-3" style={{ background: '#ffffff', color: '#1e293b' }} />
+                                        </Form.Group>
+                                    </Col>
+                                    <Col md={6} className="mb-3">
+                                        <Form.Group controlId="formEmail">
+                                            <Form.Label className="fw-bold small" style={{ color: 'var(--text-main)' }}>{t('Email')}</Form.Label>
+                                            <Form.Control type="email" placeholder={t('Email')} className="border-0 py-3 rounded-3" style={{ background: '#ffffff', color: '#1e293b' }} />
+                                        </Form.Group>
+                                    </Col>
+                                </Row>
+                                <Form.Group className="mb-3" controlId="formSubject">
+                                    <Form.Label className="fw-bold small" style={{ color: 'var(--text-main)' }}>{t('Subject')}</Form.Label>
+                                    <Form.Control type="text" placeholder={t('Subject')} className="border-0 py-3 rounded-3" style={{ background: '#ffffff', color: '#1e293b' }} />
+                                </Form.Group>
+                                <Form.Group className="mb-4" controlId="formMessage">
+                                    <Form.Label className="fw-bold small" style={{ color: 'var(--text-main)' }}>{t('Message')}</Form.Label>
+                                    <Form.Control as="textarea" rows={4} placeholder={t('Message')} className="border-0 py-3 rounded-3 resize-none" style={{ background: '#ffffff', color: '#1e293b' }} />
+                                </Form.Group>
+                                <Button variant="primary" size="lg" className="w-100 rounded-pill fw-bold shadow-sm">
+                                    {t('Send')}
+                                </Button>
+                            </Form>
+                        </div>
+                    </motion.div>
+                </div>
+            </Container>
+        </section>
+    );
+};
+
+export default ContactSection;
