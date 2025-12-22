@@ -10,9 +10,9 @@ const TestimonialsSection = () => {
     const { t } = useTranslation();
 
     const testimonials = [
-        { name: "Ahmed Ali", role: "Frontend Developer", text: "Sciber Academy transformed my career. The React course is top-notch!", image: studentImage },
-        { name: "Sara Hassan", role: "Backend Developer", text: "The Python Backend course is deep and practical. Highly recommended.", image: studentImage },
-        { name: "Omar Youssef", role: "Full Stack Developer", text: "Great community and support. I learned so much in such a short time.", image: studentImage }
+        { name: t('Testimonial1Name'), role: t('Testimonial1Role'), text: t('Testimonial1Text'), image: studentImage },
+        { name: t('Testimonial2Name'), role: t('Testimonial2Role'), text: t('Testimonial2Text'), image: studentImage },
+        { name: t('Testimonial3Name'), role: t('Testimonial3Role'), text: t('Testimonial3Text'), image: studentImage }
     ];
 
     return (
@@ -26,7 +26,7 @@ const TestimonialsSection = () => {
             <Container className="position-relative z-1">
                 <div className="text-center mb-5 pb-3">
                     <h5 className="text-primary-custom fw-bold text-uppercase mb-3" style={{ letterSpacing: '4px' }}>{t('Testimonials')}</h5>
-                    <h2 className="display-4 fw-bold text-white mb-4">What Our Students Say</h2>
+                    <h2 className="display-4 fw-bold text-white mb-4">{t('TestimonialsTitle')}</h2>
                     <motion.div
                         className="mx-auto"
                         style={{ height: '4px', width: '80px', background: 'linear-gradient(90deg, transparent, var(--primary-color), transparent)', borderRadius: '2px' }}

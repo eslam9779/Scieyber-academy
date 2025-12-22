@@ -76,7 +76,7 @@ const AboutSection = () => {
                     <Col lg={8}>
                         <MetricBox className="text-lg-start align-items-lg-start">
                             <h2 className="fw-bold mb-4 fs-1 text-primary-custom">{t('AboutStoryTitle') || 'Who We Are'}</h2>
-                            <p className="text-white-50 fs-5 mb-5" style={{ lineHeight: '1.8' }}>{t('AboutSubtitle')}</p>
+                            <p className="text-white-50 fs-5 mb-5" style={{ lineHeight: '1.8', textAlign: 'start' }}>{t('AboutSubtitle')}</p>
                             <div className="d-flex flex-wrap gap-3 mt-auto w-100">
                                 <Button href="#courses" variant="primary" className="rounded-pill px-5 py-3 text-dark fw-bold border-0 shadow-lg flex-grow-1 flex-md-grow-0" style={{ background: 'var(--primary-color)' }}>
                                     {t('LearnMore')} <FaArrowRight className="ms-2 small" />

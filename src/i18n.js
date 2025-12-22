@@ -113,7 +113,21 @@ i18n
                     WhatYouWillLearn: "What You Will Learn",
                     Module: "Module",
                     ModuleDescription: "In this module, we will cover",
-                    ModuleDescriptionEnd: "in depth with practical examples and assignments."
+                    ModuleDescriptionEnd: "in depth with practical examples and assignments.",
+                    TestimonialsTitle: "What Our Students Say",
+                    Testimonial1Name: "Ahmed Ali",
+                    Testimonial1Role: "Frontend Developer",
+                    Testimonial1Text: "Sciber Academy transformed my career. The React course is top-notch!",
+                    Testimonial2Name: "Sara Hassan",
+                    Testimonial2Role: "Backend Developer",
+                    Testimonial2Text: "The Python Backend course is deep and practical. Highly recommended.",
+                    Testimonial3Name: "Omar Youssef",
+                    Testimonial3Role: "Full Stack Developer",
+                    Testimonial3Text: "Great community and support. I learned so much in such a short time.",
+                    Company: "Company",
+                    Careers: "Careers",
+                    Contact: "Contact",
+                    FooterDesc: "Empowering the next generation of developers with world-class education and mentorship."
                 }
             },
             ar: {
@@ -211,7 +225,21 @@ i18n
                     WhatYouWillLearn: "ماذا ستتعلم في هذه الدورة",
                     Module: "الوحدة",
                     ModuleDescription: "في هذه الوحدة، سنغطي",
-                    ModuleDescriptionEnd: "بعمق مع أمثلة عملية وتمارين."
+                    ModuleDescriptionEnd: "بعمق مع أمثلة عملية وتمارين.",
+                    TestimonialsTitle: "ماذا يقول طلابنا",
+                    Testimonial1Name: "أحمد علي",
+                    Testimonial1Role: "مطور واجهات أمامية",
+                    Testimonial1Text: "أكاديمية سايبر غيرت مساري المهني. دورة React رائعة!",
+                    Testimonial2Name: "سارة حسن",
+                    Testimonial2Role: "مطورة خلفية",
+                    Testimonial2Text: "دورة Python للخلفية عميقة وعملية. أنصح بها بشدة.",
+                    Testimonial3Name: "عمر يوسف",
+                    Testimonial3Role: "مطور Full Stack",
+                    Testimonial3Text: "مجتمع رائع ودعم ممتاز. تعلمت الكثير في وقت قصير.",
+                    Company: "الشركة",
+                    Careers: "الوظائف",
+                    Contact: "اتصل بنا",
+                    FooterDesc: "تمكين الجيل القادم من المطورين من خلال التعليم والإرشاد على مستوى عالمي."
                 }
             }
         }

@@ -90,8 +90,9 @@ const CategoriesSection = () => {
                                     <Card.Body className="p-4 p-md-5 d-flex flex-column">
                                         <div className="d-md-flex align-items-start mb-4">
                                             {/* Icon Wrapper */}
-                                            <div className="mb-4 mb-md-0 me-md-4 d-flex align-items-center justify-content-center flex-shrink-0"
+                                            <div className="mb-4 mb-md-0 d-flex align-items-center justify-content-center flex-shrink-0"
                                                 style={{
+                                                    marginInlineEnd: '1.5rem',
                                                     width: '90px',
                                                     height: '90px',
                                                     background: 'rgba(255, 193, 7, 0.05)',
@@ -108,10 +109,10 @@ const CategoriesSection = () => {
                                                 <Card.Title className="fw-bold text-white mb-2 h2" style={{ letterSpacing: '-0.5px' }}>{cat.title}</Card.Title>
                                                 <div className="d-flex flex-wrap gap-3 mb-3">
                                                     <span className="badge rounded-pill px-3 py-2 fw-medium" style={{ background: 'rgba(255, 255, 255, 0.05)', color: 'var(--text-secondary)', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
-                                                        <FaClock className="me-2 text-primary-custom" /> {cat.duration}
+                                                        <FaClock style={{ marginInlineEnd: '0.5rem' }} className="text-primary-custom" /> {cat.duration}
                                                     </span>
                                                     <span className="badge rounded-pill px-3 py-2 fw-medium" style={{ background: 'rgba(255, 255, 255, 0.05)', color: 'var(--text-secondary)', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
-                                                        <FaLayerGroup className="me-2 text-primary-custom" /> {cat.level}
+                                                        <FaLayerGroup style={{ marginInlineEnd: '0.5rem' }} className="text-primary-custom" /> {cat.level}
                                                     </span>
                                                 </div>
                                             </div>
@@ -126,17 +127,17 @@ const CategoriesSection = () => {
                                             <div className="row g-2">
                                                 {cat.id === 'frontend' ? (
                                                     <>
-                                                        <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom me-2" /> HTML & CSS</div>
-                                                        <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom me-2" /> JavaScript</div>
-                                                        <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom me-2" /> Bootstrap</div>
-                                                        <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom me-2" /> React JS</div>
+                                                        <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom" style={{ marginInlineEnd: '5px' }} /> HTML & CSS</div>
+                                                        <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom" style={{ marginInlineEnd: '5px' }} /> JavaScript</div>
+                                                        <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom" style={{ marginInlineEnd: '5px' }} /> Bootstrap</div>
+                                                        <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom" style={{ marginInlineEnd: '5px' }} /> React JS</div>
                                                     </>
                                                 ) : (
                                                     <>
-                                                        <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom me-2" /> Python</div>
-                                                        <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom me-2" /> SQL Database</div>
-                                                        <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom me-2" /> Django</div>
-                                                        <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom me-2" /> REST APIs</div>
+                                                        <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom" style={{ marginInlineEnd: '5px' }} /> Python</div>
+                                                        <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom" style={{ marginInlineEnd: '5px' }} /> SQL Database</div>
+                                                        <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom" style={{ marginInlineEnd: '5px' }} /> Django</div>
+                                                        <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom" style={{ marginInlineEnd: '5px' }} /> REST APIs</div>
                                                     </>
                                                 )}
                                             </div>

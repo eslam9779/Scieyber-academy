@@ -16,7 +16,7 @@ const Footer = () => {
                     <Col lg={4} md={12}>
                         <h3 className="fw-bold text-primary mb-3 text-uppercase">{t('app_title')}</h3>
                         <p className="text-secondary opacity-75 mb-4" style={{ maxWidth: '300px' }}>
-                            Empowering the next generation of developers with world-class education and mentorship.
+                            {t('FooterDesc')}
                         </p>
                         <div className="d-flex gap-3">
                             <div className="bg-white bg-opacity-10 p-2 rounded-circle cursor-pointer hover-scale transition hover-facebook">
@@ -35,17 +35,17 @@ const Footer = () => {
                     </Col>
                     <Col lg={2} md={4} sm={6}>
                         <h6 className="text-white fw-bold mb-3 text-uppercase small" style={{ letterSpacing: '1px' }}>{t('Categories')}</h6>
-                        <ul className="list-unstyled text-secondary opacity-75 d-flex flex-column gap-2">
+                        <ul className="list-unstyled text-secondary opacity-75 d-flex flex-column gap-2" style={{ textAlign: 'start' }}>
                             <li><Link to="/course/frontend" className="text-decoration-none text-secondary hover-primary transition">{t('FrontEnd')}</Link></li>
                             <li><Link to="/course/backend" className="text-decoration-none text-secondary hover-primary transition">{t('BackEnd')}</Link></li>
                         </ul>
                     </Col>
                     <Col lg={2} md={4} sm={6}>
-                        <h6 className="text-white fw-bold mb-3 text-uppercase small" style={{ letterSpacing: '1px' }}>Company</h6>
-                        <ul className="list-unstyled text-secondary opacity-75 d-flex flex-column gap-2">
+                        <h6 className="text-white fw-bold mb-3 text-uppercase small" style={{ letterSpacing: '1px' }}>{t('Company')}</h6>
+                        <ul className="list-unstyled text-secondary opacity-75 d-flex flex-column gap-2" style={{ textAlign: 'start' }}>
                             <li><a href="#" className="text-decoration-none text-secondary hover-primary transition">{t('AboutUs')}</a></li>
-                            <li><a href="#" className="text-decoration-none text-secondary hover-primary transition">Careers</a></li>
-                            <li><a href="#" className="text-decoration-none text-secondary hover-primary transition">Contact</a></li>
+                            <li><a href="#" className="text-decoration-none text-secondary hover-primary transition">{t('Careers')}</a></li>
+                            <li><a href="#" className="text-decoration-none text-secondary hover-primary transition">{t('Contact')}</a></li>
                         </ul>
                     </Col>
                 </Row>
@@ -68,6 +68,9 @@ const Footer = () => {
                 }
                 .hover-primary:hover { color: var(--primary-color) !important; }
                 .transition { transition: all 0.3s ease; }
+                [dir="rtl"] ul.list-unstyled {
+                    padding-inline-start: 0;
+                }
             `}</style>
         </footer>
     );
