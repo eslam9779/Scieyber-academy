@@ -103,16 +103,16 @@ const Header = () => {
 
                     <div className="d-flex align-items-center gap-2 mt-3 mt-lg-0">
                         {/* Theme Toggle */}
-                        <div
+                        {/* <div
                             onClick={toggleTheme}
                             className="cursor-pointer d-flex align-items-center justify-content-center rounded-circle shadow-sm"
                             style={{ width: '38px', height: '38px', background: 'var(--card-bg)', border: '1px solid var(--card-border)', color: 'var(--text-main)' }}
                         >
                             {theme === 'dark' ? <FaSun size={18} className="text-warning" /> : <FaMoon size={16} />}
-                        </div>
+                        </div> */}
 
                         {/* Language Dropdown */}
-                        <Dropdown>
+                        {/* <Dropdown>
                             <Dropdown.Toggle
                                 variant="outline-secondary"
                                 id="dropdown-basic"
@@ -126,7 +126,7 @@ const Header = () => {
                                 <Dropdown.Item onClick={() => changeLanguage('en')} className="small py-2" style={{ color: 'var(--text-main)' }}>English</Dropdown.Item>
                                 <Dropdown.Item onClick={() => changeLanguage('ar')} className="small py-2" style={{ color: 'var(--text-main)' }}>العربية</Dropdown.Item>
                             </Dropdown.Menu>
-                        </Dropdown>
+                        </Dropdown> */}
 
                         {/* Login Button */}
                         <Link to="/login">
