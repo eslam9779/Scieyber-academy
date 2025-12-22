@@ -1,51 +1,138 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
-import { FaReact, FaPython } from 'react-icons/fa';
+import { FaReact, FaPython, FaArrowRight, FaClock, FaLayerGroup, FaCheckCircle } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-
 import { Link } from 'react-router-dom';
 
 const CategoriesSection = () => {
     const { t } = useTranslation();
 
     const categories = [
-        { id: 'frontend', title: t('FrontEnd'), icon: <FaReact size={50} color="#61DAFB" />, desc: "Master React.js, Redux, and modern UI libraries.", color: "#e3f2fd" },
-        { id: 'backend', title: t('BackEnd'), icon: <FaPython size={50} color="#306998" />, desc: "Build robust APIs with Python, Django, or Flask.", color: "#ffecb3" }
+        {
+            id: 'frontend',
+            title: t('FrontEnd'),
+            icon: <FaReact />,
+            desc: "Master React.js, Redux, and modern UI libraries with high-performance architectures.",
+            color: "#61DAFB",
+            duration: `4 ${t('Months')}`,
+            level: "Beginner to Pro"
+        },
+        {
+            id: 'backend',
+            title: t('BackEnd'),
+            icon: <FaPython />,
+            desc: "Build robust, scalable APIs and microservices with Python, Django, and modern Databases.",
+            color: "#306998",
+            duration: `4 ${t('Months')}`,
+            level: "Beginner to Pro"
+        }
     ];
 
     return (
-        <section className="py-5 position-relative">
-            <Container>
-                <div className="text-center mb-5">
-                    <h2 className="fw-bold" style={{ color: 'var(--text-main)' }}>{t('Categories')}</h2>
-                    <div className="mx-auto" style={{ height: '4px', width: '60px', background: '#0d6efd', borderRadius: '2px' }}></div>
+        <section className="py-5 position-relative overflow-hidden" id="courses" style={{ background: 'radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%)' }}>
+            {/* Background Accents */}
+            <div className="position-absolute top-0 start-50 translate-middle-x w-100 h-100" style={{ pointerEvents: 'none', zIndex: 0 }}>
+                <div className="position-absolute top-0 start-50 translate-middle-x" style={{ width: '800px', height: '400px', background: 'radial-gradient(circle, rgba(255, 193, 7, 0.03) 0%, transparent 70%)', filter: 'blur(100px)' }}></div>
+            </div>
+
+            <Container className="position-relative z-1 py-5">
+                <div className="text-center mb-5 pb-3">
+                    <motion.h5
+                        className="text-primary-custom fw-bold text-uppercase mb-3"
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        style={{ letterSpacing: '4px', fontSize: '1rem' }}
+                    >
+                        {t('ExploreOurCurriculum')}
+                    </motion.h5>
+                    <motion.h2
+                        className="display-4 fw-bold text-white mb-4"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.1 }}
+                    >
+                        {t('Categories')}
+                    </motion.h2>
+                    <motion.div
+                        className="mx-auto"
+                        style={{ height: '4px', width: '80px', background: 'linear-gradient(90deg, transparent, var(--primary-color), transparent)', borderRadius: '2px' }}
+                        initial={{ width: 0 }}
+                        whileInView={{ width: '80px' }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2, duration: 0.8 }}
+                    ></motion.div>
                 </div>
-                <Row className="justify-content-center">
+
+                <Row className="justify-content-center g-5">
                     {categories.map((cat, index) => (
-                        <Col md={6} lg={4} key={index} className="mb-4">
+                        <Col lg={6} key={index}>
                             <motion.div
-                                whileHover={{ y: -15, scale: 1.02 }}
-                                transition={{ duration: 0.3 }}
+                                initial={{ opacity: 0, scale: 0.95, y: 30 }}
+                                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6, delay: index * 0.2 }}
+                                whileHover={{ y: -10 }}
                             >
-                                <Card className="h-100 shadow-lg text-center py-5 overflow-hidden position-relative" style={{ borderRadius: '25px', background: 'var(--card-bg)', backdropFilter: 'blur(10px)', border: '1px solid var(--card-border)' }}>
-                                    <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '5px', background: 'linear-gradient(90deg, #3b82f6, #f59e0b)' }}></div>
-                                    <Card.Body className="d-flex flex-column align-items-center">
-                                        <div className="mb-4 d-inline-flex align-items-center justify-content-center rounded-circle shadow-sm" style={{ width: '120px', height: '120px', background: 'rgba(59, 130, 246, 0.1)' }}>
-                                            {cat.icon}
+                                <Card className="h-100 border-0 overflow-hidden position-relative"
+                                    style={{
+                                        borderRadius: '40px',
+                                        background: 'rgba(30, 41, 59, 0.5)',
+                                        backdropFilter: 'blur(20px)',
+                                        border: '1px solid rgba(255, 255, 255, 0.05)',
+                                        boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)'
+                                    }}>
+                                    {/* Top Glow Bar */}
+                                    <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '4px', background: `linear-gradient(90deg, transparent, var(--primary-color), transparent)` }}></div>
+
+                                    <Card.Body className="p-4 p-md-5 d-flex flex-column">
+                                        <div className="d-md-flex align-items-start mb-4">
+                                            {/* Icon Wrapper */}
+                                            <div className="mb-4 mb-md-0 me-md-4 d-flex align-items-center justify-content-center flex-shrink-0"
+                                                style={{
+                                                    width: '90px',
+                                                    height: '90px',
+                                                    background: 'rgba(255, 193, 7, 0.05)',
+                                                    borderRadius: '24px',
+                                                    fontSize: '40px',
+                                                    color: 'var(--primary-color)',
+                                                    border: '1px solid rgba(255, 193, 7, 0.1)',
+                                                    boxShadow: '0 0 20px rgba(255, 193, 7, 0.05)'
+                                                }}>
+                                                {cat.icon}
+                                            </div>
+
+                                            <div>
+                                                <Card.Title className="fw-bold text-white mb-2 h2" style={{ letterSpacing: '-0.5px' }}>{cat.title}</Card.Title>
+                                                <div className="d-flex flex-wrap gap-3 mb-3">
+                                                    <span className="badge rounded-pill px-3 py-2 fw-medium" style={{ background: 'rgba(255, 255, 255, 0.05)', color: 'var(--text-secondary)', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+                                                        <FaClock className="me-2 text-primary-custom" /> {cat.duration}
+                                                    </span>
+                                                    <span className="badge rounded-pill px-3 py-2 fw-medium" style={{ background: 'rgba(255, 255, 255, 0.05)', color: 'var(--text-secondary)', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+                                                        <FaLayerGroup className="me-2 text-primary-custom" /> {cat.level}
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <Card.Title className="fw-bold mt-3 h3" style={{ color: 'var(--text-main)' }}>{cat.title}</Card.Title>
-                                        <Card.Text className="px-3 mb-4 flex-grow-1" style={{ fontSize: '1.1rem', color: 'var(--text-secondary)' }}>
+
+                                        <Card.Text className="text-white-50 fs-5 mb-5 flex-grow-1" style={{ lineHeight: '1.6' }}>
                                             {cat.desc}
-                                            <br /><br />
-                                            <ul className="list-unstyled text-start small opacity-75" style={{ color: 'var(--text-secondary)' }}>
-                                                <li>✔️ {t('Duration')}: 12 {t('Weeks')}</li>
-                                                <li>✔️ {t('Beginner')} to Pro</li>
-                                                <li>✔️ Projects included</li>
-                                            </ul>
                                         </Card.Text>
-                                        <Link to={`/course/${cat.id}`} className="btn btn-primary rounded-pill px-5 py-2 fw-bold shadow-sm text-uppercase" style={{ letterSpacing: '1px' }}>
-                                            {t('LearnMore')}
+
+                                        <div className="mb-5">
+                                            <div className="small fw-bold text-uppercase text-primary-custom mb-3" style={{ letterSpacing: '2px' }}>{t('WhatYouWillLearn')}</div>
+                                            <div className="row g-2">
+                                                <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom me-2" /> Expert Mentorship</div>
+                                                <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom me-2" /> Real Projects</div>
+                                                <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom me-2" /> Certifications</div>
+                                                <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom me-2" /> Job Support</div>
+                                            </div>
+                                        </div>
+
+                                        <Link to={`/course/${cat.id}`} className="btn btn-primary w-100 rounded-pill py-3 fw-bold shadow-lg d-flex align-items-center justify-content-center group">
+                                            {t('LearnMore')} <FaArrowRight className="ms-2 transition-transform group-hover-translate-x" />
                                         </Link>
                                     </Card.Body>
                                 </Card>
@@ -54,6 +141,11 @@ const CategoriesSection = () => {
                     ))}
                 </Row>
             </Container>
+
+            <style>{`
+                .transition-transform { transition: transform 0.3s ease; }
+                .group:hover .group-hover-translate-x { transform: translateX(5px); }
+            `}</style>
         </section>
     );
 };

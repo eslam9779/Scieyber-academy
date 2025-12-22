@@ -16,7 +16,7 @@ const WhyChooseUs = () => {
         { image: flexibilityImg, title: t('WhyTitle2'), desc: t('WhyDesc2') },
         { image: certificationImg, title: t('WhyTitle3'), desc: t('WhyDesc3') },
         { icon: <FaUserTie />, title: t('WhyTitle4'), desc: t('WhyDesc4'), color: '#ffc107' },
-        { icon: <FaUsers />, title: t('WhyTitle5'), desc: t('WhyDesc5'), color: '#4f46e5' },
+        { icon: <FaUsers />, title: t('WhyTitle5'), desc: t('WhyDesc5'), color: '#ffc107' },
         { icon: <FaLaptopCode />, title: t('WhyTitle6'), desc: t('WhyDesc6'), color: '#10b981' },
     ];
 

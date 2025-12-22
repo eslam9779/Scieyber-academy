@@ -39,7 +39,7 @@ const AboutSection = () => {
             {/* Background Glows */}
             <div className="position-absolute top-0 start-0 w-100 h-100 overflow-hidden" style={{ pointerEvents: 'none', zIndex: 0 }}>
                 <div className="position-absolute top-10 end-10" style={{ width: '500px', height: '500px', background: 'radial-gradient(circle, rgba(255, 193, 7, 0.04) 0%, transparent 70%)', filter: 'blur(100px)' }}></div>
-                <div className="position-absolute bottom-10 start-10" style={{ width: '500px', height: '500px', background: 'radial-gradient(circle, rgba(79, 70, 229, 0.06) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
+                <div className="position-absolute bottom-10 start-10" style={{ width: '500px', height: '500px', background: 'radial-gradient(circle, rgba(255, 193, 7, 0.06) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
             </div>
 
             <Container className="position-relative z-1 py-lg-5">

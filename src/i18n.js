@@ -56,6 +56,7 @@ i18n
                     Duration: "Duration",
                     Level: "Level",
                     Weeks: "Weeks",
+                    Months: "Months",
                     Beginner: "Beginner",
                     Advanced: "Advanced",
                     ContactUs: "Contact Us",
@@ -84,7 +85,12 @@ i18n
                     WhyTitle5: "Community Access",
                     WhyDesc5: "Join a global network of ambitious developers and tech leaders.",
                     WhyTitle6: "Practical Projects",
-                    WhyDesc6: "Build real-world apps that solve actual business problems."
+                    WhyDesc6: "Build real-world apps that solve actual business problems.",
+                    AboutStoryTitle: "Our Story",
+                    Students: "Global Students",
+                    StudentsDesc: "Learning & Growing",
+                    ExploreOurCurriculum: "Explore Our Curriculum",
+                    WhatYouWillLearn: "What You Will Learn"
                 }
             },
             ar: {
@@ -121,6 +127,7 @@ i18n
                     Duration: "المدة",
                     Level: "المستوى",
                     Weeks: "أسابيع",
+                    Months: "شهور",
                     Beginner: "مبتدئ",
                     Advanced: "متقدم",
                     ContactUs: "اتصل بنا",
@@ -149,7 +156,12 @@ i18n
                     WhyTitle5: "وصول للمجتمع",
                     WhyDesc5: "انضم إلى شبكة عالمية من المطورين والقادة التقنيين الطموحين.",
                     WhyTitle6: "مشاريع عملية",
-                    WhyDesc6: "قم ببناء تطبيقات حقيقية تحل مشاكل أعمال فعلية."
+                    WhyDesc6: "قم ببناء تطبيقات حقيقية تحل مشاكل أعمال فعلية.",
+                    AboutStoryTitle: "قصتنا",
+                    Students: "طلابنا حول العالم",
+                    StudentsDesc: "تعلم ونمو مستمر",
+                    ExploreOurCurriculum: "استكشف مناهجنا التعليمية",
+                    WhatYouWillLearn: "ماذا ستتعلم في هذه الدورة"
                 }
             }
         }

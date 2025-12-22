@@ -3,6 +3,7 @@
 :root {
   /* Common Palette */
   --primary-color: #ffc107;
+  --primary-hover: #e0a800;
   --accent-color: #f59e0b;
   --font-family: 'Outfit', sans-serif;
 
@@ -94,12 +95,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--secondary-color);
+  background: var(--primary-color);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-color);
+  background: var(--primary-hover);
 }
 
 /* Utilities */
@@ -116,15 +117,17 @@ body {
 }
 
 .btn-primary {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
-  color: #0f172a;
-  /* Ensure dark text for Gold background */
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: #0f172a !important;
+  transition: all 0.3s ease !important;
 }
 
 .btn-primary:hover {
-  background-color: #e0a800;
-  border-color: #e0a800;
+  background-color: var(--primary-hover) !important;
+  border-color: var(--primary-hover) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
 }
 
 /* Bootstrap Overrides for Consistent Theme */

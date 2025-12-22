@@ -11,7 +11,7 @@ const HeroSection = () => {
     return (
         <section className="position-relative overflow-hidden py-5 d-flex align-items-center" style={{ minHeight: '85vh' }}>
             {/* Background Glow Effect */}
-            <div style={{ position: 'absolute', top: '-20%', right: isRTL ? 'auto' : '-10%', left: isRTL ? '-10%' : 'auto', width: '50%', height: '50%', background: 'rgba(59, 130, 246, 0.15)', filter: 'blur(100px)', borderRadius: '50%' }}></div>
+            <div style={{ position: 'absolute', top: '-20%', right: isRTL ? 'auto' : '-10%', left: isRTL ? '-10%' : 'auto', width: '50%', height: '50%', background: 'rgba(255, 193, 7, 0.15)', filter: 'blur(100px)', borderRadius: '50%' }}></div>
 
             <Container className="position-relative z-1">
                 <Row className="align-items-center">
