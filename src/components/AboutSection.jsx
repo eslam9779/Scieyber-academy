@@ -91,7 +91,7 @@ const AboutSection = () => {
                     {/* Stats Box (Yellow/Gold with icon) */}
                     <Col lg={4}>
                         <MetricBox isPrimary={true} icon={<FaUsers />}>
-                            <motion.h2 className="display-2 fw-black mb-0" style={{ fontWeight: 900 }}>10k+</motion.h2>
+                            <motion.h2 className="display-2 fw-black mb-0" style={{ fontWeight: 900 }}>100+</motion.h2>
                             <p className="fw-bold text-uppercase fs-5 m-0" style={{ letterSpacing: '2px' }}>{t('Students') || 'Global Students'}</p>
                             <div className="mt-2 opacity-75 small fw-bold text-uppercase" style={{ letterSpacing: '1px' }}>{t('StudentsDesc') || 'Learning & Growing'}</div>
                         </MetricBox>
