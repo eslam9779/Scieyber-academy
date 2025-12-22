@@ -81,7 +81,7 @@ const AboutSection = () => {
                                 <Button href="#courses" variant="primary" className="rounded-pill px-5 py-3 text-dark fw-bold border-0 shadow-lg flex-grow-1 flex-md-grow-0" style={{ background: 'var(--primary-color)' }}>
                                     {t('LearnMore')} <FaArrowRight className="ms-2 small" />
                                 </Button>
-                                <Button href="#contact" variant="outline-light" className="rounded-pill px-5 py-3 opacity-50 hover-opacity-100 transition-all border-white text-white flex-grow-1 flex-md-grow-0">
+                                <Button href="#contact" variant="outline-light" className="rounded-pill px-5 py-3 opacity-50 hover-opacity-100 transition-all border-white flex-grow-1 flex-md-grow-0">
                                     {t('ContactTitle')} <FaComment className="ms-2 small" />
                                 </Button>
                             </div>

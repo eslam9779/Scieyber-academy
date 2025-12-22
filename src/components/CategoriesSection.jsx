@@ -13,7 +13,7 @@ const CategoriesSection = () => {
             id: 'frontend',
             title: t('FrontEnd'),
             icon: <FaReact />,
-            desc: "Master React.js, Redux, and modern UI libraries with high-performance architectures.",
+            desc: t('FrontEndDesc'),
             color: "#61DAFB",
             duration: `4 ${t('Months')}`,
             level: "Beginner to Pro"
@@ -22,7 +22,7 @@ const CategoriesSection = () => {
             id: 'backend',
             title: t('BackEnd'),
             icon: <FaPython />,
-            desc: "Build robust, scalable APIs and microservices with Python, Django, and modern Databases.",
+            desc: t('BackEndDesc'),
             color: "#306998",
             duration: `4 ${t('Months')}`,
             level: "Beginner to Pro"
@@ -124,10 +124,21 @@ const CategoriesSection = () => {
                                         <div className="mb-5">
                                             <div className="small fw-bold text-uppercase text-primary-custom mb-3" style={{ letterSpacing: '2px' }}>{t('WhatYouWillLearn')}</div>
                                             <div className="row g-2">
-                                                <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom me-2" /> Expert Mentorship</div>
-                                                <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom me-2" /> Real Projects</div>
-                                                <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom me-2" /> Certifications</div>
-                                                <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom me-2" /> Job Support</div>
+                                                {cat.id === 'frontend' ? (
+                                                    <>
+                                                        <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom me-2" /> HTML & CSS</div>
+                                                        <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom me-2" /> JavaScript</div>
+                                                        <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom me-2" /> Bootstrap</div>
+                                                        <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom me-2" /> React JS</div>
+                                                    </>
+                                                ) : (
+                                                    <>
+                                                        <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom me-2" /> Python</div>
+                                                        <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom me-2" /> SQL Database</div>
+                                                        <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom me-2" /> Django</div>
+                                                        <div className="col-6 text-white-50 small d-flex align-items-center"><FaCheckCircle className="text-primary-custom me-2" /> REST APIs</div>
+                                                    </>
+                                                )}
                                             </div>
                                         </div>
 

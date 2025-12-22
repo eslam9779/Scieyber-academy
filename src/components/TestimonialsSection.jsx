@@ -16,8 +16,14 @@ const TestimonialsSection = () => {
     ];
 
     return (
-        <section className="py-5 position-relative">
-            <Container>
+        <section className="py-5 position-relative overflow-hidden" style={{ background: '#0f172a' }}>
+            {/* Background Glows */}
+            <div className="position-absolute top-0 start-0 w-100 h-100 overflow-hidden" style={{ pointerEvents: 'none', zIndex: 0 }}>
+                <div className="position-absolute top-10 start-10" style={{ width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(255, 193, 7, 0.03) 0%, transparent 70%)', filter: 'blur(100px)' }}></div>
+                <div className="position-absolute bottom-0 end-0" style={{ width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(255, 193, 7, 0.03) 0%, transparent 70%)', filter: 'blur(100px)' }}></div>
+            </div>
+
+            <Container className="position-relative z-1">
                 <div className="text-center mb-5 pb-3">
                     <h5 className="text-primary-custom fw-bold text-uppercase mb-3" style={{ letterSpacing: '4px' }}>{t('Testimonials')}</h5>
                     <h2 className="display-4 fw-bold text-white mb-4">What Our Students Say</h2>

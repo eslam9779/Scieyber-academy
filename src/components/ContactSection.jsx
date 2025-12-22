@@ -7,8 +7,13 @@ const ContactSection = () => {
     const { t } = useTranslation();
 
     return (
-        <section className="py-5 position-relative">
-            <Container>
+        <section className="py-5 position-relative overflow-hidden" id="contact" style={{ background: 'var(--bg-body)' }}>
+            {/* Background Glows */}
+            <div className="position-absolute top-0 start-0 w-100 h-100 overflow-hidden" style={{ pointerEvents: 'none', zIndex: 0 }}>
+                <div className="position-absolute top-0 end-0" style={{ width: '500px', height: '500px', background: 'radial-gradient(circle, rgba(255, 193, 7, 0.05) 0%, transparent 70%)', filter: 'blur(100px)' }}></div>
+            </div>
+
+            <Container className="position-relative z-1">
                 <div className="text-center mb-5 pb-3">
                     <h5 className="text-primary-custom fw-bold text-uppercase mb-3" style={{ letterSpacing: '4px' }}>{t('ContactUs')}</h5>
                     <h2 className="display-4 fw-bold text-white mb-4">{t('ContactTitle')}</h2>

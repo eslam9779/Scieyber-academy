@@ -19,16 +19,16 @@ const Footer = () => {
                             Empowering the next generation of developers with world-class education and mentorship.
                         </p>
                         <div className="d-flex gap-3">
-                            <div className="bg-white bg-opacity-10 p-2 rounded-circle cursor-pointer hover-scale transition">
+                            <div className="bg-white bg-opacity-10 p-2 rounded-circle cursor-pointer hover-scale transition hover-facebook">
                                 <FaFacebook size={20} className="text-white" />
                             </div>
-                            <div className="bg-white bg-opacity-10 p-2 rounded-circle cursor-pointer hover-scale transition">
+                            <div className="bg-white bg-opacity-10 p-2 rounded-circle cursor-pointer hover-scale transition hover-twitter">
                                 <FaTwitter size={20} className="text-white" />
                             </div>
-                            <div className="bg-white bg-opacity-10 p-2 rounded-circle cursor-pointer hover-scale transition">
+                            <div className="bg-white bg-opacity-10 p-2 rounded-circle cursor-pointer hover-scale transition hover-linkedin">
                                 <FaLinkedin size={20} className="text-white" />
                             </div>
-                            <div className="bg-white bg-opacity-10 p-2 rounded-circle cursor-pointer hover-scale transition">
+                            <div className="bg-white bg-opacity-10 p-2 rounded-circle cursor-pointer hover-scale transition hover-instagram">
                                 <FaInstagram size={20} className="text-white" />
                             </div>
                         </div>
@@ -48,21 +48,6 @@ const Footer = () => {
                             <li><a href="#" className="text-decoration-none text-secondary hover-primary transition">Contact</a></li>
                         </ul>
                     </Col>
-                    <Col lg={4} md={4}>
-                        <h6 className="text-white fw-bold mb-3 text-uppercase small" style={{ letterSpacing: '1px' }}>Newsletter</h6>
-                        <p className="text-secondary small opacity-75 mb-3">Subscribe to get the latest updates and course offers.</p>
-                        <InputGroup className="mb-3">
-                            <Form.Control
-                                placeholder="Email address"
-                                aria-label="Email address"
-                                className="bg-transparent border-secondary text-white focus-ring-0"
-                                style={{ borderRadius: '50px 0 0 50px', borderColor: '#334155' }}
-                            />
-                            <Button variant="primary" id="button-addon2" style={{ borderRadius: '0 50px 50px 0' }}>
-                                <FaPaperPlane />
-                            </Button>
-                        </InputGroup>
-                    </Col>
                 </Row>
                 <hr className="border-secondary opacity-25 my-5" />
                 <div className="text-center text-secondary small opacity-50">
@@ -70,7 +55,17 @@ const Footer = () => {
                 </div>
             </Container>
             <style>{`
-                .hover-scale:hover { transform: scale(1.1); background-color: var(--primary-color) !important; }
+                .hover-scale:hover { 
+                    transform: scale(1.1); 
+                }
+                .hover-facebook:hover { background-color: #1877F2 !important; }
+                .hover-twitter:hover { background-color: #1DA1F2 !important; }
+                .hover-linkedin:hover { background-color: #0A66C2 !important; }
+                .hover-instagram:hover { background-color: #E4405F !important; }
+                
+                .hover-scale:hover svg {
+                    color: white !important;
+                }
                 .hover-primary:hover { color: var(--primary-color) !important; }
                 .transition { transition: all 0.3s ease; }
             `}</style>
