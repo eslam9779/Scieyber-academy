@@ -14,7 +14,7 @@ const HeroSection = () => {
             <div style={{ position: 'absolute', top: '-20%', right: isRTL ? 'auto' : '-10%', left: isRTL ? '-10%' : 'auto', width: '50%', height: '50%', background: 'rgba(255, 193, 7, 0.15)', filter: 'blur(100px)', borderRadius: '50%' }}></div>
 
             <Container className="position-relative z-1">
-                <Row className="align-items-center">
+                <Row className="align-items-center" style={{ rowGap: '50px' }}>
                     <Col lg={6} className={isRTL ? 'order-lg-2 ps-lg-5' : 'pe-lg-5'}>
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}

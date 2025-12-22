@@ -82,7 +82,7 @@ const CourseDetails = () => {
                             </div>
                         </Card>
                     </Col>
-                    <Col lg={4}>
+                    <Col lg={4} className="mt-4 mt-lg-0">
                         <h4 className="fw-bold mb-4">{t('WhatYouWillLearn')}</h4>
                         <ul className="list-unstyled">
                             {courseData.whatYouWillLearn.map((item, i) => (

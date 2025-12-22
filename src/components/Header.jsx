@@ -90,7 +90,7 @@ const Header = () => {
                     <div><span className="text-primary-custom" style={{ color: 'var(--primary-color)' }}>Scieyber</span> <span className="small fw-light d-block fs-6" style={{ lineHeight: '0.8', letterSpacing: '3px', color: 'var(--text-main)' }}>ACADEMY</span></div>
                 </Navbar.Brand>
 
-                <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-0 shadow-none opacity-75" />
+                <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ borderColor: 'var(--primary-color)', color: 'var(--primary-color)' }} />
 
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mx-auto align-items-center">
@@ -112,7 +112,7 @@ const Header = () => {
                         </div> */}
 
                         {/* Language Dropdown */}
-                        {/* <Dropdown>
+                        <Dropdown>
                             <Dropdown.Toggle
                                 variant="outline-secondary"
                                 id="dropdown-basic"
@@ -126,7 +126,7 @@ const Header = () => {
                                 <Dropdown.Item onClick={() => changeLanguage('en')} className="small py-2" style={{ color: 'var(--text-main)' }}>English</Dropdown.Item>
                                 <Dropdown.Item onClick={() => changeLanguage('ar')} className="small py-2" style={{ color: 'var(--text-main)' }}>العربية</Dropdown.Item>
                             </Dropdown.Menu>
-                        </Dropdown> */}
+                        </Dropdown>
 
                         {/* Login Button */}
                         <Link to="/login">
@@ -156,6 +156,9 @@ const Header = () => {
                 }
                 .cursor-pointer { cursor: pointer; }
                 .hover-scale:hover { transform: scale(1.05); }
+                .navbar-toggler-icon {
+                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffc107' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+                }
             `}</style>
         </Navbar>
     );
