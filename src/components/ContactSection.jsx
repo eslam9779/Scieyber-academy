@@ -9,10 +9,18 @@ const ContactSection = () => {
     return (
         <section className="py-5 position-relative">
             <Container>
-                <div className="text-center mb-5">
-                    <h5 className="text-primary-custom fw-bold text-uppercase">{t('ContactUs')}</h5>
-                    <h2 className="display-6 fw-bold" style={{ color: 'var(--text-main)' }}>{t('ContactTitle')}</h2>
-                    <p className="opacity-75" style={{ color: 'var(--text-secondary)' }}>{t('ContactSubtitle')}</p>
+                <div className="text-center mb-5 pb-3">
+                    <h5 className="text-primary-custom fw-bold text-uppercase mb-3" style={{ letterSpacing: '4px' }}>{t('ContactUs')}</h5>
+                    <h2 className="display-4 fw-bold text-white mb-4">{t('ContactTitle')}</h2>
+                    <motion.div
+                        className="mx-auto"
+                        style={{ height: '4px', width: '80px', background: 'linear-gradient(90deg, transparent, var(--primary-color), transparent)', borderRadius: '2px' }}
+                        initial={{ width: 0 }}
+                        whileInView={{ width: '80px' }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2, duration: 0.8 }}
+                    ></motion.div>
+                    <p className="text-white-50 fs-5 mt-4">{t('ContactSubtitle')}</p>
                 </div>
                 <div className="d-flex justify-content-center">
                     <motion.div

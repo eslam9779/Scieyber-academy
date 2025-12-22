@@ -9,7 +9,7 @@ const MetricBox = ({ children, delay = 0, className = "", isPrimary = false, ico
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.5, delay }}
+        transition={{ duration: 0.3, delay }}
         whileHover={{ scale: 1.02, y: -5 }}
         className={`h-100 p-4 p-md-5 rounded-5 shadow-lg d-flex flex-column justify-content-center align-items-center text-center ${className}`}
         style={{
@@ -54,13 +54,21 @@ const AboutSection = () => {
                         {t('AboutUs')}
                     </motion.h5>
                     <motion.h2
-                        className="display-4 fw-bold text-white mb-0"
+                        className="display-4 fw-bold text-white mb-4"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
                         <Trans i18nKey="AboutTitle" components={{ span: <span className="text-primary-custom" /> }} />
                     </motion.h2>
+                    <motion.div
+                        className="mx-auto"
+                        style={{ height: '4px', width: '80px', background: 'linear-gradient(90deg, transparent, var(--primary-color), transparent)', borderRadius: '2px' }}
+                        initial={{ width: 0 }}
+                        whileInView={{ width: '80px' }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2, duration: 0.8 }}
+                    ></motion.div>
                 </div>
 
                 <Row className="g-4 align-items-stretch">

@@ -73,7 +73,7 @@ const CategoriesSection = () => {
                                 initial={{ opacity: 0, scale: 0.95, y: 30 }}
                                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.6, delay: index * 0.2 }}
+                                transition={{ duration: 0.3, delay: index * 0.2 }}
                                 whileHover={{ y: -10 }}
                             >
                                 <Card className="h-100 border-0 overflow-hidden position-relative"
