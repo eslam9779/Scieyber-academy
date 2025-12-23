@@ -1,12 +1,12 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
-import { FaReact, FaPython, FaArrowRight, FaClock, FaLayerGroup, FaCheckCircle } from 'react-icons/fa';
+import { FaReact, FaPython, FaArrowRight, FaClock, FaLayerGroup, FaCheckCircle, FaArrowLeft } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const CategoriesSection = () => {
-    const { t } = useTranslation();
+    const { t ,i18n } = useTranslation();
 
     const categories = [
         {
@@ -144,7 +144,7 @@ const CategoriesSection = () => {
                                         </div>
 
                                         <Link to={`/course/${cat.id}`} className="btn btn-primary w-100 rounded-pill py-3 fw-bold shadow-lg d-flex align-items-center justify-content-center group">
-                                            {t('LearnMore')} <FaArrowRight className="ms-2 transition-transform group-hover-translate-x" />
+                                            {t('LearnMore')} {i18n.resolvedLanguage === 'ar' ? <FaArrowLeft className="me-2 transition-transform group-hover-translate-x" /> : <FaArrowRight className="ms-2 transition-transform group-hover-translate-x" />}
                                         </Link>
                                     </Card.Body>
                                 </Card>

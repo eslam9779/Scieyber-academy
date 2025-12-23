@@ -3,7 +3,7 @@ import React from 'react';
 // import { Container, Row, Col } from 'react-bootstrap';
 import { Container, Row, Col, Form, Button, InputGroup } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaPaperPlane } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaPaperPlane, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -48,6 +48,47 @@ const Footer = () => {
                             <li><a href="#" className="text-decoration-none text-secondary hover-primary transition">{t('Contact')}</a></li>
                         </ul>
                     </Col>
+                    <Col lg={2} md={4} sm={6}>
+                        <h6
+                            className="text-white fw-bold mb-3 text-uppercase small"
+                            style={{ letterSpacing: '1px' }}
+                        >
+                            {t('contact_us')}
+                        </h6>
+
+                        <ul
+                            className="list-unstyled text-secondary opacity-75 d-flex flex-column gap-3"
+                            style={{ textAlign: 'start' }}
+                        >
+                            <li className="d-flex align-items-center gap-2">
+                                <FaPhoneAlt className="text-primary" />
+                                <a
+                                    href="tel:+20123456789"
+                                    className="text-decoration-none text-secondary hover-primary transition"
+                                >
+                                   01144602019
+                                </a>
+                            </li>
+
+                            <li className="d-flex align-items-center gap-2">
+                                <FaEnvelope className="text-primary" />
+                                <a
+                                    href="mailto:info@cyberacademy.com"
+                                    className="text-decoration-none text-secondary hover-primary transition"
+                                >
+                                    info@cyberacademy.com
+                                </a>
+                            </li>
+
+                            <li className="d-flex align-items-center gap-2">
+                                <FaMapMarkerAlt className="text-primary" />
+                                <span className="text-secondary">
+                                    {t('address')}
+                                </span>
+                            </li>
+                        </ul>
+                    </Col>
+
                 </Row>
                 <hr className="border-secondary opacity-25 my-5" />
                 <div className="text-center text-secondary small opacity-50">

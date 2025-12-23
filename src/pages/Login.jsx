@@ -25,12 +25,12 @@ const Login = () => {
                         <Form>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>{t('Email')}</Form.Label>
-                                <Form.Control type="email" placeholder="Enter email" className="rounded-pill p-3 border-0 bg-light" />
+                                <Form.Control type="email" placeholder={t('enter_email')} className="rounded-pill p-3 border-0 bg-light" />
                             </Form.Group>
 
                             <Form.Group className="mb-4" controlId="formBasicPassword">
                                 <Form.Label>{t('Password')}</Form.Label>
-                                <Form.Control type="password" placeholder="Password" className="rounded-pill p-3 border-0 bg-light" />
+                                <Form.Control type="password" placeholder={t('enter_password')} className="rounded-pill p-3 border-0 bg-light" />
                             </Form.Group>
 
                             <Button variant="primary" type="submit" className="w-100 rounded-pill p-3 fw-bold mb-3">

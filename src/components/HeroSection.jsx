@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { useTranslation, Trans } from 'react-i18next';
 import { motion } from 'framer-motion';
+// import heroImage from '../assets/images/scieyber.jpeg';
 import heroImage from '../assets/images/hero_illustration.png';
 
 const HeroSection = () => {
