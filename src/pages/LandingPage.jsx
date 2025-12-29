@@ -5,6 +5,7 @@ import TestimonialsSection from '../components/TestimonialsSection';
 import AboutSection from '../components/AboutSection';
 import ContactSection from '../components/ContactSection';
 import WhyChooseUs from '../components/WhyChooseUs';
+import FAQSection from '../components/FAQSection';
 
 const LandingPage = () => {
     return (
@@ -14,6 +15,7 @@ const LandingPage = () => {
             <section id="courses"><CategoriesSection /></section>
             <section id="why-choose-us"><WhyChooseUs /></section>
             <section id="testimonials"><TestimonialsSection /></section>
+            {/* <section id="testimonials"><FAQSection /></section> */}
             <section id="contact"><ContactSection /></section>
         </>
     );
